@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Changa', sans-serif;
+}
+
+body{
+    background-color : #fff5eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    position : relative;
+}
+
+.clock{
+    width : 300px;
+    height : 300px;
+    background-color: #ffffff;
+    border : 10px solid #800000;
+    border-radius : 50%;
+    box-shadow: 0px 0px 20px rgb(189, 171, 171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset : 12px;
+    text-align: center;
+    padding :4px;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 22px;
+}
+
+.clock::before{
+    content : "";
+    position : absolute;
+    width : 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+    z-index : 1;
+}
+
+.hand{
+    position : absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width : var(--w);
+    height: var(--h);
+    border-radius: 10px;
+}

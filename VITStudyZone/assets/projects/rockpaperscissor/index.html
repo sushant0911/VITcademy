@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="gameName">Rock Paper Scissor</h1>
+            <br>
+            <div class="gameBoard">
+
+                <div class="computerCount">
+                    <table cellspacing = "0px">
+                        <tr>
+                            <th>Computer</th>
+                        </tr>
+                        <tr>
+                            <td id="compCount">0</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="yourCount">
+                    <table cellspacing = "0px">
+                        <tr>
+                            <th>Your</th>
+                        </tr>
+                        <tr>
+                            <td id="youCount">0</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+
+                <div class="opponentContainer">
+                    <div class="box" id="opponent">
+                        
+                    </div>
+                </div>
+                <div id="msg-container">
+                    Let's Start!
+                </div>
+                <div class="yourChoice">
+                    <div class="box" id="Rock"><img src="Images/rock.png" alt="Rock"></div>
+                    <div class="box" id="Paper"><img src="Images/paper.png" alt="Paper"></div>
+                    <div class="box" id="Scissor"><img src="Images/scissors.png" alt="Scissor"></div>
+                </div>
+
+            </div>
+
+
+            <div class="restartContainer">
+                <button id="restart">Restart</button>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

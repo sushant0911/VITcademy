@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Marhey:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --backGroundColor : #3A405A;
+    --textColor : #FFC857;
+    --box-color : #F9DEC9;
+}
+
+body{
+    font-family: 'Marhey', sans-serif;
+    background-color: var(--backGroundColor);
+}
+
+.gameName{
+    text-align: center;
+    margin-top: 4px;
+    font-size: 35px;
+}
+
+.container{
+    height: 100vh;
+    color : var(--textColor);
+    padding: 10px;
+}
+
+.box{
+    height: 180px;
+    width: 180px;
+    border: 2px solid #fdfcfc ;
+    margin : 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--box-color);
+    border-radius: 50%;
+    
+}
+
+.opponentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.yourChoice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yourChoice .box{
+    margin : 0px 20px;
+    cursor: pointer;
+}
+
+.yourChoice :hover {
+    box-shadow: 0px 0px 8px var(--box-color);
+    transition-duration: 0.5s;
+}
+
+.restartContainer{
+    margin-top : 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: var(--textColor);
+    color: var(--backGroundColor);
+    font-family: 'Finger Paint', sans-serif;
+    font-size: 16px;
+    border: 2px solid var(--textColor);
+}
+
+button:hover{
+    color: #000000;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#msg-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin : 15px 0px;
+    font-size: 50px;
+    
+}
+
+img{
+    width : 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+
+#opponent{
+    animation: change 1s infinite;
+    background-size: 70px;
+    transition-duration: 0.1s;
+}
+
+.countContainer{
+    position : absolute;
+    margin-right : 4px;
+}
+
+.computerCount{
+    position: absolute;
+    right : 100px ;
+    font-size: 40px;
+    text-align: center;
+}
+
+.yourCount{
+    position: absolute; 
+    left : 100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+table, td, tr, th{
+    border: 2px solid var(--backGroundColor);
+}
+
+td{
+    width: 300px;
+    height: 20px;
+    background-color: #fff1e6;
+    color : var(--box-color);
+    font-size: 100px;
+    color :#3A405A;
+}
+
+th{
+    height: 100px;
+    width: 300px;
+    background-color: var(--textColor);
+    color :#000000;
+}
+
+@keyframes change {
+    0%{
+        background-image: url(Images/rock.png);
+    }
+    60%{
+        background-image: url(Images/paper.png);
+    }
+    100%{
+        background-image: url(Images/scissors.png);
+    }
+}
